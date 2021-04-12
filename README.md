@@ -6,3 +6,8 @@
 
 <audio ref='themeSong' src="https://raw.githubusercontent.com/myName/myRepo/master/vendor/assets/music/Tetris.mp3
 .mp3" autoPlay loop></audio>
+
+<script>
+var audio = new Audio("https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/Audio.mp3")
+audio.play()
+</script>
