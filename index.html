@@ -1,137 +1,520 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Listen to YouTube videos, without the distracting visuals">
-    <meta name="author" content="Shakeel Mohamed">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="D3SjNR3tmNYOusESQijh_oH5SGmU9QsAIVwlqizwRBU" />
+<!DOCTYPE HTML>
+<!--
+    Prism by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  -->
+<html>
+  <head>
+    <title>Supplementary Material Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/extra.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+    <!-- Banner -->
+    <section id="banner">
+      <div class="inner">
+      <!-- <img src="images/mp32wav_thumbnail2.png" width="250" height="140"> -->
+	<section>
+	  <h2>Stochastic Restoration of Heavily Compressed Audio using Generative Adversarial Networks</h2>
+	</section>
+      </div>
+      <div id="logorow" class="inner split">
+	<section class="align-center">
+	  <a href="https://csl.sony.fr/"><img id='sonylogo' src="images/sonycsl-white.png"></a>
+	</section>
+	<section class="align-left">
+    <br/>
+	    Sony Computer Science Laboratories Paris
+	</section>
+      </div>
+    </section>
 
-    <title>Zen Audio Player</title>
 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <section id="intro" class="wrapper">
+    <a name="up"></a>
+      <div class="inner split">
+				<section>
+					<p>This page contains supplementary material for the manuscript <br/>J. Nistal, C. Aouameur, S. Lattner, G. Richard, <b>VQCPC-GAN: Variable-Length Adversarial Audio Synthesis Using Vector-Quantized Contrastive Predictive Coding</b>, submitted to <i>Workshop on Audio Signal Processing to Audio and Acoustics, WASPAA</i>, March 2021</p>
+					
+	  <p>The examples below demonstrate the generation of harmonic audios from the NSynth dataset using different durations. In order to ensure a moderate loading time of this website, all files have been saved at 192kbit/s mono. , please <a href="mailto:stefan.lattner@sony.com">contact us</a>.
+      </p>
+      <div class="align-center">
+      <a href="#16k" class="button alt">16k</a>&nbsp;&nbsp;
+      <a href="#32k" class="button alt">32k</a>&nbsp;&nbsp;
+      <a href="#64k" class="button alt">64k</a>&nbsp;&nbsp;
+      <a href="#problem" class="button alt">Outtakes</a>
+	  </div>
+	</section>
+	<section>
+	  <div class="row 12u$(xsmall)">
+	    <p>Architecture training:</p>
+	  </div>
+	  <div class="row 12u$(xsmall)">
+	    <img class="full-width" src="images/GAN_training.png"/>
+	  </div>
+      <br/><br/>
+      <ul class="align-center">
+								<a href="#full" class="button alt">Full Architecture</a>
+							</ul>
+	</section>
+      </div>
+    </section>
 
-    <link rel="stylesheet" href="bower_components/primer-css/css/primer.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bower_components/plyr/dist/plyr.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <section id="two" class="wrapper style2 alt">
+				<div class="inner">
+                <a name="16k"></a>
+                <h3>Samples of 16kbit/s MP3 restoration</h3>
+                <table style="width:100%">
+                	<tr>
+                    <th style="width: 16%;">Original</th>
+                    <th style="width: 16%;">MP3</th>
+                    <th style="width: 16%;">Generated 1</th>
+                    <th style="width: 16%;">Generated 2</th>
+                    <th style="width: 16%;">Generated 3</th>
+                    <th style="width: 16%;">Deterministic</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/0_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/0_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/0_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/0_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/0_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/0_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/1_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/1_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/1_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/1_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/1_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/1_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/2_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/2_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/2_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/2_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/2_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/2_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/3_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/3_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/3_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/3_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/3_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/3_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/4_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/4_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/4_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/4_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/4_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/4_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/5_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/5_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/5_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/5_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/5_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/5_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/6_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/6_mp3.mp3" type="audio/wav"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/6_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/6_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/6_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/6_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/7_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/7_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/7_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/7_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/7_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/7_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/8_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/8_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/8_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/8_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/8_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/8_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/16k/9_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/9_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/9_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/9_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/9_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/16k/9_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+								<li><a href="#up" class="button alt">Up</a></li>
+							</ul>
+                            </div>
+                </section>
+                
+                <section id="two" class="wrapper style2 alt">
+				<div class="inner">
+                <a name="32k"></a>
+                <h3>Samples of 32kbit/s MP3 restoration</h3>
+                <table style="width:100%">
+                	<tr>
+                    <th style="width: 16%;">Original</th>
+                    <th style="width: 16%;">MP3</th>
+                    <th style="width: 16%;">Generated 1</th>
+                    <th style="width: 16%;">Generated 2</th>
+                    <th style="width: 16%;">Generated 3</th>
+                    <th style="width: 16%;">Deterministic</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/0_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/0_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/0_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/0_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/0_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/0_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/1_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/1_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/1_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/1_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/1_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/1_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/2_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/2_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/2_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/2_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/2_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/2_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/3_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/3_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/3_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/3_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/3_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/3_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/4_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/4_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/4_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/4_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/4_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/4_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/5_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/5_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/5_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/5_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/5_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/5_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/6_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/6_mp3.mp3" type="audio/wav"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/6_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/6_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/6_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/6_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/7_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/7_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/7_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/7_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/7_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/7_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/8_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/8_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/8_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/8_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/8_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/8_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/32k/9_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/9_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/9_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/9_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/9_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/32k/9_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+								<li><a href="#up" class="button alt">Up</a></li>
+							</ul>
+                            </div>
+                </section>
+                
+                <section id="two" class="wrapper style2 alt">
+				<div class="inner">
+                <a name="64k"></a>
+                <h3>Samples of 64kbit/s MP3 restoration</h3>
+                <table style="width:100%">
+                	<tr>
+                    <th style="width: 16%;">Original</th>
+                    <th style="width: 16%;">MP3</th>
+                    <th style="width: 16%;">Generated 1</th>
+                    <th style="width: 16%;">Generated 2</th>
+                    <th style="width: 16%;">Generated 3</th>
+                    <th style="width: 16%;">Deterministic</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/0_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/0_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/0_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/0_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/0_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/0_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/1_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/1_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/1_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/1_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/1_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/1_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/2_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/2_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/2_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/2_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/2_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/2_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/3_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/3_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/3_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/3_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/3_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/3_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/4_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/4_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/4_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/4_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/4_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/4_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/5_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/5_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/5_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/5_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/5_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/5_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/6_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/6_mp3.mp3" type="audio/wav"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/6_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/6_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/6_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/6_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/7_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/7_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/7_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/7_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/7_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/7_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/8_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/8_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/8_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/8_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/8_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/8_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/64k/9_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/9_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/9_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/9_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/9_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/64k/9_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+					</div>
+                    <div class="align-center">
+                          <ul class="actions">
+								<li><a href="#up" class="button alt">Up</a></li>
+							</ul>
+                            </div>
+                    </section>
+                    <section id="two" class="wrapper style2 alt">
+				<div class="inner">
+                <a name="problem"></a>
+                <h3>Problematic examples</h3>
+                <p>
+                The examples below are restorations of 32kbit/s MP3s which did not work very well. For example, it is difficult for the model when the input audio is very loud and full, or when there is only voice. In such cases, the added frequencies seem noisy, and also sometimes the model generates percussions on non-plausible positions (examples 1-6). Also, there are (seldomly)  
+ some input signals which cause specific distrubances (example 7). Another common problem is that the model sometimes overemphasizes the "s" of a singing voice too much, or causes percussive noise on inappropriate positions (examples 8-10). Such examples lower the perceived quality and led to negative evaluations in the user tests.
+                </p>
+                <table style="width:100%">
+                	<tr>
+                    <th style="width: 3%;">Nr.</th>
+                    <th style="width: 16%;">Original</th>
+                    <th style="width: 16%;">MP3</th>
+                    <th style="width: 16%;">Generated 1</th>
+                    <th style="width: 16%;">Generated 2</th>
+                    <th style="width: 16%;">Generated 3</th>
+                    <th style="width: 16%;">Deterministic</th>
+                    </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><audio controls><source src="assets/out/0_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/0_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/0_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/0_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/0_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/0_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>2</td>
+                        <td><audio controls><source src="assets/out/1_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/1_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/1_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/1_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/1_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/1_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>3</td>
+                        <td><audio controls><source src="assets/out/2_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/2_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/2_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/2_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/2_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/2_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>4</td>
+                        <td><audio controls><source src="assets/out/3_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/3_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/3_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/3_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/3_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/3_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>5</td>
+                        <td><audio controls><source src="assets/out/4_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/4_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/4_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/4_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/4_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/4_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>6</td>
+                        <td><audio controls><source src="assets/out/5_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/5_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/5_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/5_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/5_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/5_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>7</td>
+                        <td><audio controls><source src="assets/out/6_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/6_mp3.mp3" type="audio/wav"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/6_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/6_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/6_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/6_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>8</td>
+                        <td><audio controls><source src="assets/out/7_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/7_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/7_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/7_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/7_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/7_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>9</td>
+                        <td><audio controls><source src="assets/out/8_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/8_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/8_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/8_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/8_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/8_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                      <td>10</td>
+                        <td><audio controls><source src="assets/out/9_orig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/9_mp3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/9_rand1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/9_rand2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/9_rand3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/out/9_det.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+								<li><a href="#up" class="button alt">Up</a></li>
+							</ul>
+                            </div>
+                </section>
+                    <section id="two" class="wrapper style2 alt">
+                    <a name="full"></a>
+                    <div class="row 12u$(xsmall)">
+	    <h3>Full Architecture</h3>
+	  </div>
+	  <div class="align-center">
+	    <img class="nine-width" src="images/architecture_full.png"/>
+	  </div>
+                          <div class="align-center">
+                          <ul class="actions">
+								<li><a href="#up" class="button alt">Up</a></li>
+							</ul>
+                            </div>
+                    </section>
 
-    <script type="text/javascript">window._trackJs = { token: "f58d0b7c4b4248939fddc582f9e55c9d" };</script>
-    <script src="bower_components/trackjs/tracker.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
-    <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
-    <script src="bower_components/urijs/src/URI.min.js"></script>
-    <script src="js/zap-common.js"></script>
-    <script src="js/everything.js"></script>
-    <script src="bower_components/plyr/dist/plyr.js"></script>
-
-</head>
-<body>
-    <header>
-        <!-- The logo & description -->
-        <figure>
-            <a href="https://zen-audio-player.github.io/" title="Zen Audio Player" class="zen-logo">
-                <img src="img/zen-audio-player-905.png" class="img-100" alt="Zen Audio Player logo">
-            </a>
-        </figure>
-
-        <hgroup>
-            <h1>Zen Audio Player</h1>
-            <h2 class="color-grey">Listen to YouTube videos, without the distracting visuals.</h2>
-            <h2 class="color-grey hide flash" id="mobile-message"></h2>
-        </hgroup>
-    </header>
-    <div id="container">
-        <!-- The form -->
-        <form id="form">
-            <div class="input-group">
-                <input type="text" id="v" name="v" class="input-search color-grey" placeholder="Search, YouTube video ID, or URL">
-                <span class="input-group-button">
-                    <button class="btn btn-search" id="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
-            </div>
-        </form>
-        <div id="search-results">
-            <h3>Search Results</h3>
-            <ul></ul>
-        </div>
-        <div id="zen-error" class="hide flash flash-error"></div>
-        <!-- The video, along with related content & messages -->
-        <div id="audioplayer">
-            <h3>
-                <a id="zen-video-title" class="plyr__cite plyr__cite--video"></a>
-            </h3>
-
-            <div id="playerControls">
-                <button class="btn" id="togglePlayer">
-                    Show Player
-                </button>
-                <button class="btn" id="toggleDescription">
-                    Show Description
-                </button>
-                <button class="btn" id="toggleRepeat">
-                    Repeat Track
-                </button>
-            </div>
-
-            <!-- Plyr controls' icons and Plyr player itself -->
-            <div id="plyr-svg" hidden>
-            </div>
-            <div class="plyr">
-                <audio></audio>
-            </div>
-            <br>
-            <div id="zen-video-description"></div>
-            <br>
-        </div>
-        <button id="demo" class="btn">
-            <i class="fa fa-mouse-pointer"></i>
-            Click for Demo
-        </button>
-
-        <div>
-          <br>
-          <button class="btn" id="focus-btn">
-              <i class="fa fa-headphones"></i>
-              Focus
-          </button>
-        </div>
-    </div>
-
-    <footer>
-        <!-- Twitter hashtag button: #ZenAudioPlayer -->
-        <div id="tweetButton"></div>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script>
-        <!-- Attribution, and links -->
-        <div class="color-grey">
-            <p>Created by <a href="https://twitter.com/_Shakeel" target="_blank">@_Shakeel</a> and <a href="https://github.com/zen-audio-player/zen-audio-player.github.io/graphs/contributors" target="_blank">others.</a></p>
-            <p>Source available on <a href="https://github.com/zen-audio-player/zen-audio-player.github.io" target="_blank">GitHub</a></p>
-            <p><a href="https://chrome.google.com/webstore/detail/zen-youtube-audio-player/jlkomkpeedajclllhhfkloddbihmcjlm" target="_blank">Get the Chrome extension</a> - (<a href="https://github.com/zen-audio-player/extension-chrome" target="_blank">source</a>)</p>
-        </div>
-
-        <br>
-
-        <!-- Sponsor links -->
-        <h3>Sponsored by:</h3>
-        <div class="sponsor">
-            <a href="https://trackjs.com/" class="sponsor-a" target="_blank">
-                <img src="img/trackjs_logo.png" alt="TrackJS Logo" class="img-40">
-            </a>
-            <div class="clear-both"></div>
-        </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="copyright">
+	&copy; Stefan Lattner and Javier Nistal. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>.
+      </div>
     </footer>
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "url": "https://zenplayer.audio",
-            "logo": "https://zenplayer.audio/img/zen-audio-player-905.png"
-        }
-    </script>
-</body>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/extra.js"></script>
+
+  </body>
 </html>
